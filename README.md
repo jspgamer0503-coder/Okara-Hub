@@ -127,15 +127,6 @@ okara-hub/
 └── package.json
 ```
 
-## Contributing
-
-Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a PR.
-
-Quick checklist:
-1. Fork → feature branch → PR
-2. Keep commits focused and descriptive
-3. Test in dev mode (`npm run dev`) before submitting
-
 ## License
 
 [MIT](LICENSE) © 2026 Okara Hub
