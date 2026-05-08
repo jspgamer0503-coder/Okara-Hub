@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "date": "2026-03-10",
+  "notes": "- Initial release\n- Ad blocker with live stats\n- Smart AI router\n- Auto logo fetching from official sources\n- Built-in translator\n- Prompt history",
+  "platforms": {
+    "linux": {
+      "url": "https://github.com/YOUR_GITHUB_USERNAME/okara-hub/releases/download/v1.0.0/okara-hub_1.0.0_amd64.deb",
+      "size": 74000000
+    }
+  }
+}

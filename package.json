@@ -1,0 +1,123 @@
+{
+  "name": "neural-dock",
+  "version": "1.0.0",
+  "description": "Neural Dock — Unified AI Hub",
+  "main": "electron/main.js",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n vite,electron \"vite\" \"node scripts/wait-and-launch.js\"",
+    "build": "vite build && electron-builder --linux deb",
+    "build:all": "vite build && electron-builder --linux deb AppImage",
+    "vite": "vite",
+    "electron": "electron .",
+    "logos": "node scripts/fetch-logos.js",
+    "preview": "vite preview",
+    "build:appimage": "vite build && electron-builder --linux AppImage"
+  },
+  "build": {
+    "appId": "com.neural.dock",
+    "productName": "Neural Dock",
+    "copyright": "Copyright © 2026 Neural Dock",
+    "asar": true,
+    "directories": {
+      "output": "dist-electron",
+      "buildResources": "build"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "!**/node_modules/**",
+      "!**/.git/**"
+    ],
+    "linux": {
+      "target": [
+        {
+          "target": "deb",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build",
+      "category": "Utility",
+      "description": "Neural Dock — Unified AI Hub",
+      "maintainer": "Okara Hub <support@okara.app>",
+      "vendor": "Okara Hub",
+      "synopsis": "All your AI assistants in one place",
+      "executableName": "okara-hub",
+      "desktop": {
+        "Name": "Neural Dock",
+        "Comment": "Neural Dock — Unified AI Hub",
+        "Categories": "Utility;Network;",
+        "Keywords": "AI;ChatGPT;Claude;Gemini;Assistant;",
+        "StartupWMClass": "neural-dock"
+      }
+    },
+    "deb": {
+      "packageCategory": "net",
+      "priority": "optional",
+      "compression": "xz",
+      "depends": [
+        "libnotify4",
+        "libxtst6",
+        "libnss3",
+        "libxss1",
+        "libasound2",
+        "libatk1.0-0",
+        "libatk-bridge2.0-0",
+        "libcups2",
+        "libdrm2",
+        "libgbm1",
+        "libgtk-3-0",
+        "libxcomposite1",
+        "libxdamage1",
+        "libxfixes3",
+        "libxrandr2",
+        "libpango-1.0-0",
+        "libcairo2"
+      ],
+      "afterInstall": "build/postinst.sh",
+      "afterRemove": "build/postrm.sh",
+      "fpm": [
+        "--deb-no-default-config-files"
+      ]
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "GITHUB_USERNAME",
+      "repo": "okara-hub"
+    }
+  },
+  "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.6",
+    "@radix-ui/react-scroll-area": "^1.2.3",
+    "@radix-ui/react-select": "^2.1.6",
+    "@radix-ui/react-switch": "^1.1.3",
+    "@radix-ui/react-tabs": "^1.1.3",
+    "@radix-ui/react-tooltip": "^1.1.8",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "electron-updater": "^6.8.3",
+    "lucide-react": "^0.475.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.26.0",
+    "tailwind-merge": "^3.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.2",
+    "electron": "^34.0.0",
+    "electron-builder": "^25.1.8",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.19",
+    "vite": "^6.1.0",
+    "wait-on": "^8.0.3"
+  },
+  "homepage": "https://github.com/okara/hub",
+  "author": {
+    "name": "Okara Hub",
+    "email": "support@okara.app"
+  }
+}
