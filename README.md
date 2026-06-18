@@ -127,6 +127,14 @@ okara-hub/
 └── package.json
 ```
 
+## Keyboard Shortcuts
+
+| Shortcut | Action |
+|---|---|
+| `Ctrl+W` / `Cmd+W` | Close the application window |
+| `Ctrl+R` / `Cmd+R` | Reload the currently active AI provider view |
+| `Ctrl+Shift+R` / `Cmd+Shift+R` | Reload all open AI provider views |
+
 ## License
 
 [MIT](LICENSE) © 2026 Okara Hub

@@ -1,7 +1,7 @@
 {
-  "name": "neural-dock",
+  "name": "okara-hub",
   "version": "1.0.0",
-  "description": "Neural Dock — Unified AI Hub",
+  "description": "Okara Hub — All your AI assistants in one place",
   "main": "electron/main.js",
   "private": true,
   "scripts": {
@@ -101,7 +101,6 @@
     "lucide-react": "^0.475.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.26.0",
     "tailwind-merge": "^3.0.2"
   },
   "devDependencies": {
