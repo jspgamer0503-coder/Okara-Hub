@@ -1,6 +1,6 @@
 {
   "name": "okara-hub",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Okara Hub — All your AI assistants in one place",
   "main": "electron/main.js",
   "private": true,

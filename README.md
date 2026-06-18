@@ -33,6 +33,7 @@ Okara Hub is a cross-platform Electron desktop application that embeds all your 
 | ⚙️ **Model Management** | Enable/disable built-ins, add custom providers with any URL |
 | 💾 **Persistent Config** | Auto-saved to `~/.config/okara-hub/config.json` |
 | 🔄 **Auto-updater** | In-app update banner with one-click install |
+| ⌨️ **Keyboard Shortcuts** | Close window, reload provider, or reload all providers via `Ctrl/Cmd+W/R/Shift+R` |
 | 📦 **Zero manual setup** | Runs out of the box after `npm install` |
 
 ## Built-in Providers
@@ -134,6 +135,10 @@ okara-hub/
 | `Ctrl+W` / `Cmd+W` | Close the application window |
 | `Ctrl+R` / `Cmd+R` | Reload the currently active AI provider view |
 | `Ctrl+Shift+R` / `Cmd+Shift+R` | Reload all open AI provider views |
+
+## Known Issues
+
+- **Updater requires `GH_TOKEN` in dev mode** — The auto-updater checks for new versions against GitHub Releases. When running from source (`npm run dev`), you must set the `GH_TOKEN` environment variable to a [GitHub personal access token](https://github.com/settings/tokens) with `repo` scope. Otherwise the update check will fail silently.
 
 ## License
 
